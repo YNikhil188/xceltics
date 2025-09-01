@@ -178,7 +178,7 @@ Clone repository:
 
 bash
 Copy code
-git clone https://github.com/<your-username>/Xceltics.git
+git clone https://github.com/YNikhil188/xceltics
 cd Xceltics
 Install backend dependencies:
 
