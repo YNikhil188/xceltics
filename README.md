@@ -179,23 +179,51 @@ npm run dev
 
 ---
 
-## 📂 Project Layout
+## 📁 Project Structure
 
 ```
-Xcelitics/
-├── backend/
-│   ├── controllers/      # API logic
-│   ├── models/           # MongoDB schemas
-│   ├── routes/           # API endpoints
-│   ├── services/         # AI & email integrations
-│   └── index.js          # Express entry
-├── frontend/
-│   ├── src/
-│   │   ├── components/   # React components
-│   │   ├── redux/        # Redux store & slices
-│   │   └── css/          # Styles
-│   └── vite.config.js    # Build config
-└── README.md
+Excel_Analytics_Platform/
+├── 📁 backend/                    # Backend API server
+│   ├── 📁 controllers/            # Request handlers
+│   ├── 📁 middleware/             # Authentication & validation
+│   ├── 📁 models/                 # Database schemas
+│   │   ├── 📄 User.js            # User authentication model
+│   │   ├── 📄 ExcelFile.js       # File metadata model
+│   │   └── 📄 Activity.js        # User activity tracking
+│   ├── 📁 routes/                 # API route definitions
+│   │   ├── 📄 authRoutes.js      # Authentication endpoints
+│   │   ├── 📄 excelRoutes.js     # File handling endpoints
+│   │   └── 📄 userRoutes.js      # User management endpoints
+│   ├── 📁 services/               # External service integrations
+│   │   └── 📄 geminiService.js   # AI analysis service
+│   ├── 📁 utils/                  # Utility functions
+│   ├── 📁 uploads/                # File storage directory
+│   ├── 📄 index.js               # Express server entry point
+│   ├── 📄 package.json           # Backend dependencies
+│   └── 📄 .env                   # Environment variables
+├── 📁 frontend/                   # React frontend application
+│   ├── 📁 public/                 # Static assets
+│   ├── 📁 src/                    # Source code
+│   │   ├── 📁 components/         # React components
+│   │   │   ├── 📄 Dashboard.js   # Main dashboard
+│   │   │   ├── 📄 FileUpload.js  # File upload interface
+│   │   │   ├── 📄 AIInsights.js  # AI analysis display
+│   │   │   ├── 📄 ThreeDChart.js # 3D visualization
+│   │   │   ├── 📄 Login.js       # Authentication forms
+│   │   │   └── 📄 Signup.js      # User registration
+│   │   ├── 📁 redux/              # State management
+│   │   │   ├── 📄 store.js       # Redux store configuration
+│   │   │   └── 📄 authSlice.js   # Authentication state
+│   │   ├── 📁 css/                # Stylesheets
+│   │   │   ├── 📄 index.css      # Global styles
+│   │   │   ├── 📄 dashboard.css  # Dashboard styles
+│   │   │   └── 📄 responsive.css # Responsive design
+│   │   ├── 📄 App.js             # Main application component
+│   │   └── 📄 index.js           # React entry point
+│   ├── 📄 package.json           # Frontend dependencies
+│   └── 📄 vite.config.js         # Vite configuration
+├── 📄 README.md                   # Project documentation
+└── 📄 .gitignore                 # Git ignore rules
 ```
 
 ---
