@@ -1,0 +1,1198 @@
+.ai-insights-section {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+  margin-top: 30px;
+}
+
+
+.ai-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 30px;
+  text-align: center;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eaeaea;
+}
+
+.empty-state-icon {
+  font-size: 5rem;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite ease-in-out;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  height: 80px;
+}
+
+/* Make sure the animation is visible */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.empty-state-icon svg {
+  color: #2e7d32;
+  width: 80px;
+  height: 80px;
+}
+
+.ai-empty-state h3 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+.ai-empty-state p {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 25px;
+  max-width: 500px;
+}
+
+.ai-empty-state .ai-question-form {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px 0 20px;
+}
+
+.ai-empty-state .question-input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #c8e6c9;
+  border-radius: 50px !important;
+  padding: 0;
+  height: 50px;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.ai-empty-state .question-input-wrapper:focus-within {
+  border-color: #2e7d32 !important;
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.15) !important;
+  transform: translateY(-1px);
+}
+
+.ai-empty-state .ai-question-input {
+  height: 100%;
+  flex: 1;
+  padding: 0 20px;
+  font-size: 16px;
+  border: none;
+  background-color: white !important;
+  color: #333 !important;
+  outline: none;
+  width: 100%;
+}
+
+.ai-empty-state .ask-button {
+  border-top-right-radius: 50px !important;
+  border-bottom-right-radius: 50px !important;
+  min-width: 60px;
+  width: 60px !important;
+  padding: 0 !important;
+}
+.send-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+/* Question form styling */
+.ai-question-form {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.question-input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #c8e6c9;
+  border-radius: 50px !important;
+  padding: 0;
+  height: 50px;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+}
+
+.question-input-wrapper:focus-within {
+  border-color: #2e7d32 !important;
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.15) !important;
+  transform: translateY(-1px);
+}
+
+.ai-question-input {
+  height: 100%;
+  flex: 1;
+  padding: 0 20px;
+  font-size: 16px;
+  border: none;
+  background-color: white !important;
+  color: #333 !important;
+  outline: none;
+}
+
+.ai-question-input::placeholder {
+  color: #9e9e9e;
+  font-style: italic;
+}
+
+.ai-question-form input[type="text"]:focus,
+.ai-insights-results input[type="text"]:focus {
+  border: none !important;
+  background-color: white !important;
+  box-shadow: none !important;
+}
+
+.ask-button {
+background-color: #2e7d32;
+  color: white;
+  border: none;
+  height: 100%;
+  min-width: 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  width: auto !important; /* Override the global width: 100% */
+  border-radius: 0 50px 50px 0 !important;
+  padding: 0 !important;
+}
+
+.ask-button:hover {
+  background-color: #1b5e20;
+}
+
+.ask-button:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+/* Explicitly override any form button global styling */
+.ai-question-form button[type="submit"] {
+  width: 60px !important;
+  min-width: 60px !important;
+  padding: 0 !important;
+  border-radius: 0 50px 50px 0 !important;
+}
+
+.ai-question-form button[type="submit"]:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+/* Action buttons */
+.ai-actions-container {
+  display: none;
+}
+
+.analyze-ai-button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.25);
+}
+
+/* Loading state styling */
+.ai-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.ai-spinner {
+  font-size: 3rem;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ai-loading p {
+  font-size: 1.8rem;
+  color: #555;
+}
+
+/* Error state styling */
+.ai-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  background-color: #fff8f8;
+  border-radius: 10px;
+}
+
+.error-icon {
+  font-size: 3rem;
+  color: #d32f2f;
+  margin-bottom: 15px;
+}
+
+.error-message h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #d32f2f;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.error-message p {
+  font-size: 1.6rem;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.retry-button {
+  background-color: transparent;
+  border: 1px solid #d32f2f;
+  color: #d32f2f;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.retry-button:hover {
+  background-color: rgba(211, 47, 47, 0.1);
+}
+
+/* Results styling */
+.ai-insights-results {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.ai-insights-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.ai-insights-header h3 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+.analysis-timestamp {
+  font-size: 1.4rem;
+  color: #777;
+  font-style: italic;
+}
+
+.ai-insights-content {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 25px;
+}
+
+/* Previous questions section */
+.previous-questions {
+  margin-top: 15px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 15px;
+}
+.previous-questions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.previous-questions h4 {
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.previous-questions h4 svg {
+  color: #2e7d32;
+}
+
+.previous-questions ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.previous-questions li {
+  background-color: white;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 1.3rem;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.previous-questions li:hover {
+  background-color: #f1f8e9;
+  border-color: #c5e1a5;
+  transform: translateY(-2px);
+}
+
+.previous-questions li svg {
+  color: #2e7d32;
+  font-size: 1.4rem;
+}
+
+/* Let's update the markdown content styling to ensure consistency */
+.markdown-content {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.markdown-content h1 {
+  font-size: 2.4rem;
+  margin-top: 0;
+  color: #2e7d32;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.markdown-content h2 {
+  font-size: 2rem;
+  margin-top: 30px;
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+.markdown-content h3 {
+  font-size: 1.8rem;
+  margin-top: 25px;
+  color: #2e7d32; /* Change this to green to match the style */
+  margin-bottom: 12px;
+}
+
+.markdown-content h4 {
+  font-size: 1.6rem;
+  margin-top: 20px;
+  color: #2e7d32; /* Keep this green too */
+  margin-bottom: 10px;
+}
+
+/* Let's add specific styling for the first heading of each answer */
+.markdown-content h1:first-child,
+.markdown-content h2:first-child,
+.markdown-content h3:first-child {
+  margin-top: 0;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+/* Add consistent styling for item titles in lists */
+.markdown-content strong {
+  font-weight: 600;
+}
+
+.markdown-content ul, .markdown-content ol {
+  padding-left: 25px;
+  margin: 15px 0;
+}
+
+.markdown-content li {
+  margin-bottom: 8px;
+}
+
+.markdown-content code {
+  background-color: #f3f3f3;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.markdown-content pre {
+  background-color: #f3f3f3;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.markdown-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.markdown-content th, .markdown-content td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.markdown-content th {
+  background-color: #f3f3f3;
+  font-weight: 600;
+}
+
+.markdown-content tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Action buttons */
+.ai-insights-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.regenerate-button {
+  background-color: transparent;
+  border: 1px solid #2e7d32;
+  color: #2e7d32;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.regenerate-button:hover {
+  background-color: rgba(46, 125, 50, 0.1);
+}
+
+.regenerate-button:disabled {
+  border-color: #a5d6a7;
+  color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+/* Utility classes */
+.ai-insights-section .green-ask-bar {
+  display: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .question-input-wrapper {
+    flex-direction: row !important; /* Keep it horizontal */
+  }
+  
+  .ask-button {
+  align-self: center;
+    padding: 0 !important;
+    width: 60px !important;
+  }
+  
+  .markdown-content {
+    font-size: 1.4rem;
+  }
+  
+  .markdown-content h1 {
+    font-size: 2rem;
+  }
+  
+  .markdown-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .markdown-content h3 {
+    font-size: 1.6rem;
+  }
+}
+/* Add styling for guidance responses */
+.ai-guidance {
+  background-color: #f8f9fa;
+  border-left: 4px solid #2e7d32;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.guidance-content h1 {
+  color: #2e7d32;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.guidance-content h2 {
+  color: #333;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.guidance-content ul {
+  margin-left: 20px;
+}
+
+.guidance-content li {
+  margin-bottom: 8px;
+}
+
+.guidance-content code {
+  background-color: #e8f5e9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+.ai-insights-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.ai-insights-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ai-insights-title h3 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.9rem;
+  margin: 0;
+  font-weight: 500;
+}
+.ai-insights-title .header-label {
+  color: #333;
+  font-weight: 500;
+}
+.ai-insights-title .file-name {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.insights-icon {
+  font-size: 2.2rem;
+  color: #2e7d32;
+}
+
+.analysis-timestamp-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #777;
+  font-style: italic;
+  font-size: 1.4rem;
+}
+
+.timestamp-icon {
+  color: #777;
+  font-size: 1.4rem;
+}
+.clear-history-btn {
+  background-color: transparent;
+  border: none;
+  color: #777;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.clear-history-btn:hover {
+  background-color: #f0f0f0;
+  color: #d32f2f;
+}
+
+.questions-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.question-history-item {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+}
+
+.question-item {
+  padding: 12px 15px;
+  background-color: #f1f8e9;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.question-item:hover {
+  background-color: #e8f5e9;
+}
+
+.question-icon {
+  color: #2e7d32;
+  font-size: 1.6rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.question-content {
+  flex: 1;
+}
+
+.question-text {
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+
+.question-timestamp {
+  font-size: 1.1rem;
+  color: #777;
+}
+/* Scrollbar styling */
+.questions-history-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.questions-history-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.questions-history-list::-webkit-scrollbar-thumb {
+  background: #c5e1a5;
+  border-radius: 10px;
+}
+
+.questions-history-list::-webkit-scrollbar-thumb:hover {
+  background: #a5d6a7;
+}
+/* Add these styles for the delete button */
+.delete-question-btn {
+  background: transparent;
+  border: none;
+  color: #bbb;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  opacity: 1; 
+  margin-left: auto; 
+}
+
+.question-item:hover .delete-question-btn {
+  opacity: 1; 
+}
+
+.delete-question-btn:hover {
+  background-color: rgba(211, 47, 47, 0.1);
+  color: #d32f2f;
+}
+
+
+.question-item {
+  padding: 12px 15px;
+  background-color: #f1f8e9;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: all 0.2s ease;
+  position: relative; 
+}
+/* Add these styles to AIInsights.css */
+.typing-animation {
+  position: relative;
+}
+
+.typing-animation::after {
+  content: '|';
+  display: inline;
+  color: #2e7d32;
+  animation: blink 0.8s step-end infinite;
+  margin-left: 2px;
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.ai-insights-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: #f1f8e9;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 1.5rem;
+}
+
+.copy-button:hover {
+  background-color: #e8f5e9;
+}
+
+.copy-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Add animation for when the content is copied */
+@keyframes copied-flash {
+  0%, 100% { background-color: #e8f5e9; }
+  50% { background-color: #a5d6a7; }
+}
+
+.copy-button.success {
+  animation: copied-flash 1s;
+}
+/* Add smooth scrolling to the entire document */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add a subtle entrance animation for the content */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ai-insights-content {
+  animation: slideDown 0.3s ease-out;
+  scroll-margin-top: 20px; /* Add space above when scrolling to this element */
+}
+/* Mobile Responsiveness for AI Insights */
+@media (max-width: 768px) {
+  /* Improve overall container */
+  .ai-insights-section {
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  /* Header improvements */
+  .ai-insights-header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .ai-insights-title h3 {
+    font-size: 1.7rem;
+    flex-wrap: wrap;
+  }
+  
+  .insights-icon {
+    font-size: 1.8rem;
+  }
+  
+  .analysis-timestamp-container {
+    font-size: 1.2rem;
+  }
+  
+  /* Question form improvements */
+  .ai-question-form {
+    margin-bottom: 15px;
+  }
+  
+  .question-input-wrapper {
+    height: 45px;
+  }
+  
+  .ask-button {
+    min-width: 45px;
+    width: 45px !important;
+  }
+  
+  .send-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Empty state improvements */
+  .ai-empty-state {
+    padding: 30px 15px;
+  }
+  
+  .empty-state-icon {
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .empty-state-icon svg {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .ai-empty-state h3 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+  
+  .ai-empty-state p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Chat history improvements */
+  .previous-questions {
+    margin-top: 12px;
+    padding: 12px 10px;
+  }
+  
+  .previous-questions-header h4 {
+    font-size: 1.3rem;
+  }
+  
+  .clear-history-btn {
+    font-size: 1.2rem;
+    padding: 4px 8px;
+  }
+  
+  .question-history-item {
+    margin-bottom: 8px;
+  }
+  
+  .question-item {
+    padding: 10px;
+  }
+  
+  .question-icon {
+    font-size: 1.4rem;
+  }
+  
+  .question-text {
+    font-size: 1.3rem;
+    margin-bottom: 3px;
+  }
+  
+  .question-timestamp {
+    font-size: 1rem;
+  }
+  
+  .delete-question-btn {
+    font-size: 1.4rem;
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Results content improvements */
+  .ai-insights-content {
+    padding: 15px;
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+  
+  /* Loading state improvements */
+  .ai-loading {
+    padding: 25px 15px;
+  }
+  
+  .ai-spinner {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .ai-loading p {
+    font-size: 1.5rem;
+  }
+  
+  /* Action buttons improvements */
+  .ai-insights-actions {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .regenerate-button, .copy-button {
+    padding: 8px 12px;
+    font-size: 1.3rem;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Fix for overflow content */
+  .ai-insights-results {
+    gap: 15px;
+    overflow-x: hidden;
+  }
+  
+  /* Improve insights content typography */
+  .markdown-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .markdown-content h2 {
+    font-size: 1.6rem;
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .markdown-content h3 {
+    font-size: 1.5rem;
+    margin-top: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .markdown-content p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+  
+  .markdown-content ul, .markdown-content ol {
+    padding-left: 20px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .ai-insights-title h3 {
+    font-size: 1.5rem;
+  }
+  
+  .ai-insights-title .header-label,
+  .ai-insights-title .file-name {
+    display: block;
+    width: 100%;
+  }
+  
+  /* Make buttons more touch-friendly */
+  .regenerate-button, .copy-button {
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+  
+  /* Further shrink icons */
+  .insights-icon {
+    font-size: 1.6rem;
+  }
+  
+  /* Better spacing for AI insights */
+  .ai-empty-state {
+    padding: 20px 12px;
+  }
+  
+  .ai-empty-state h3 {
+    font-size: 1.6rem;
+  }
+  
+  /* Improve questions history display */
+  .questions-history-list {
+    max-height: 300px;
+  }
+  
+  /* Make the question input more touchable */
+  .question-input-wrapper {
+    height: 50px;
+  }
+  
+  .ask-button {
+    min-width: 50px;
+    width: 50px !important;
+  }
+  
+  /* Add extra bottom padding to ensure action buttons are always accessible */
+  .ai-insights-results {
+    padding-bottom: 20px;
+  }
+}
+
+/* Fix the typing animation for better mobile experience */
+@media (max-width: 768px) {
+  .typing-animation::after {
+    font-size: 1.2rem;
+    margin-left: 1px;
+  }
+}
+/* Specific fixes for question input area on mobile */
+@media (max-width: 576px) {
+  /* Enhance the question input experience */
+  .ai-question-form form {
+    width: 100%;
+  }
+  
+  .question-input-wrapper {
+    width: 100%;
+    height: 46px;
+  }
+  
+  /* Keep the send button visible and properly sized */
+  .ask-button {
+    min-width: 46px;
+    width: 46px !important;
+    height: 100%;
+  }
+  
+  /* Improve AI response content layout */
+  .ai-insights-content {
+    word-break: break-word;
+  }
+  
+  /* Make the content more readable on small screens */
+  .markdown-content pre {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 10px;
+  }
+  
+  /* Adjust code blocks for mobile */
+  .markdown-content code {
+    font-size: 12px;
+    padding: 2px 4px;
+    word-break: break-all;
+  }
+  
+  /* Fix tables on mobile */
+  .markdown-content table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  /* Make toggle buttons easier to tap */
+  .toggle-analysis-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  /* Better file name display */
+  .file-name {
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.ai-insights-section input.ai-question-input,
+.ai-insights-section form input.ai-question-input,
+.ai-insights-section .question-input-wrapper input.ai-question-input,
+input.ai-question-input[type="text"],
+.ai-question-form input.ai-question-input[type="text"] {
+  margin: 0 !important;
+}
+
+@media (max-width: 576px) {
+  .ai-insights-section input.ai-question-input,
+  .ai-insights-section form input.ai-question-input,
+  .ai-insights-section .question-input-wrapper input.ai-question-input,
+  input.ai-question-input[type="text"],
+  .ai-question-form input.ai-question-input[type="text"] {
+    font-size: 13px !important;
+    padding: 0 10px !important;
+  }
+  
+  .ai-insights-section .question-input-wrapper,
+  .question-input-wrapper {
+    height: 38px !important;
+    min-height: 38px !important;
+    max-height: 38px !important;
+  }
+  
+  .ai-insights-section .ask-button,
+  .ask-button {
+    width: 38px !important;
+    min-width: 38px !important;
+    max-width: 38px !important;
+    height: 100% !important;
+  }
+  
+  .ai-insights-section .send-icon,
+  .send-icon {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}

@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --primary: #e65100; /* Dark Burnt Orange */
+  --primary-dark: #bf360c;
+  --accent: #ff9800; /* Bright Orange */
+  --light: #ffcc80; /* Warm Amber */
+  --bg: #faf3eb; /* Creamy Beige */
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+/* Animated gradient background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(-45deg, #faf3eb, #ffe0b2, #ffcc80, #ffe082);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Container */
+.intro-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Main Layout */
+.intro-main {
+  display: flex;
+  flex: 1;
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+/* Left Section */
+.intro-left,
+.intro-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.intro-left h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.intro-left p {
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Glassmorphic Login Card */
+.intro-form {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  transition: all 0.4s ease;
+}
+
+.intro-form:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.intro-form h2 {
+  font-size: 3rem;
+  text-align: center;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.intro-form p {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.intro-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.intro-logo img {
+  border-radius: 12px;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* Gradient Button */
+.login-btn {
+  padding: 1.3rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  border: none;
+  box-shadow: 0 5px 15px rgba(229, 81, 0, 0.4);
+  width: 100%;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(229, 81, 0, 0.6);
+}
+
+/* Features Section */
+.features-section {
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+
+.features-section h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  margin: 0 1.5rem;
+  padding: 2rem;
+  border-radius: 16px;
+  min-width: 220px;
+  height: 180px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+  transition: color 0.3s;
+}
+
+.feature-item:hover .feature-icon {
+  color: var(--accent);
+}
+
+.features-section p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .intro-main {
+    flex-direction: column;
+    text-align: center;
+  }
+  .intro-left h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-form {
+    padding: 2rem;
+  }
+  .intro-form h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-left h1 {
+    font-size: 2rem;
+  }
+  .intro-form {
+    padding: 1.5rem;
+  }
+  .login-btn {
+    font-size: 1.2rem;
+  }
+  .feature-item {
+    min-width: 160px;
+    height: 140px;
+  }
+}

@@ -1,0 +1,1696 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+:root {
+  --primary: #e65100; /* Dark Burnt Orange */
+  --primary-dark: #bf360c;
+  --accent: #ff9800; /* Bright Orange */
+  --light: #ffcc80; /* Warm Amber */
+  --bg: #faf3eb; /* Creamy Beige */
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+/* Update login container with consistent background color */
+.login-main {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  flex-direction: row;
+}
+
+/* Improve image display across all screen sizes */
+.login-left {
+  flex: 3;
+  max-width: 60%;
+  height: 100vh;
+  background-color: #e65100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.login-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  max-height: 100vh;
+  display: block; /* Ensure image always displays */
+}
+
+.login-left-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Update the right side background to match intro page gradient */
+.login-right {
+  flex: 2;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  min-width: 40%;
+}
+
+/* Add a subtle pattern to enhance the background */
+.login-right-container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: transparent;
+  height: 100%;
+  max-width: 600px;
+}
+
+.login-right form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.login-logo {
+  align-self: center;
+  padding-top: 50px;
+}
+
+.login-center {
+  margin: auto 0;
+  text-align: center;
+  color: var(--primary);
+  padding: 20px 30px;
+  border-radius: 16px;
+  width: 100%;
+}
+
+.login-logo img {
+  width: 50px;
+}
+
+.login-center h2 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.login-center p {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+form input[type="email"],
+form input[type="password"],
+form input[type="text"] {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 0px;
+  border-bottom: 1px solid var(--primary);
+  outline: none;
+  box-sizing: border-box;
+  color: rgb(80, 29, 4);
+  font-size: 1.6rem;
+  background-color: transparent; /* Remove white background */
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+/* Add subtle hover effect */
+form input[type="email"]:hover,
+form input[type="password"]:hover,
+form input[type="text"]:hover {
+  border-bottom: 1px solid rgb(9, 101, 9);
+  background-color: rgba(255, 255, 255, 0.1); /* Very subtle hover background */
+}
+
+/* Add focus effect */
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form input[type="text"]:focus {
+  border-bottom: 2px solid var(--primary);
+  background-color: rgba(255, 255, 255, 0.15); /* Slightly more visible when focused */
+}
+
+/* Update placeholder color for better visibility on gradient */
+input::placeholder {
+  color: rgb(253, 75, 10); /* More visible green placeholder text */
+  opacity: 0.8;
+  font-size: 1.6rem;
+}
+
+.pass-input-div {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.pass-input-div input {
+  margin-bottom: 16px;
+}
+
+.pass-input-div svg {
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  bottom: 35px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* For the signup page with two password fields */
+.pass-input-div.two-fields svg {
+    bottom: 32px; 
+}
+
+form button[type="submit"]:not(.exclude-global-styles), 
+form button[type="button"]:not(.exclude-global-styles) {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Add a utility class to exempt buttons from global styling */
+.button-auto-width {
+  width: auto !important;
+  padding: 0 15px !important;
+}
+
+/* Fix the remember me and forgot password section */
+.login-center-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.remember-div {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.remember-div label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.forgot-pass-link {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--primary);
+}
+
+.forgot-pass-link:hover {
+  text-decoration: underline;
+}
+
+.login-center-buttons {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.login-center-buttons button:nth-child(1) {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: 55px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure login button has the same hover effect */
+.login-center-buttons button:nth-child(1):hover {
+  background-color: var(--light);
+  color:black;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.login-center-buttons button:nth-child(2) {
+  background-color: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  height: 55px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+/* Update hover effect for create account button */
+.login-center-buttons button:nth-child(2):hover {
+  background-color: white;
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Add new styles for login center buttons */
+.login-center-buttons button {
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.login-center-buttons button:nth-child(1):hover {
+  background-color: var(--light) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.login-center-buttons button:nth-child(2):hover {
+  background-color: white !important;
+  color: var(--primary) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.login-bottom-p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+.login-bottom-p a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--light);
+}
+
+.login-bottom-p a:hover {
+  text-decoration: underline;
+}
+
+.navigation-button {
+  cursor: pointer;
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+  padding: 2rem;
+}
+
+.dashboard-card {
+  background-color: var(--bg);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--bg);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive adjustments for the header */
+@media (max-width: 992px) {
+  .dashboard-main {
+    width: 100%;
+    margin-left: 0; /* Remove the margin for main content */
+  }
+  
+  .dashboard-header {
+    padding: 1.5rem;
+  }
+  
+  .header-title h1 {
+    font-size: 2rem;
+  }
+  
+  /* Fix header actions alignment */
+  .header-actions {
+    gap: 1.5rem;
+  }
+  
+  /* Improve header user dropdown on mobile */
+  .header-user {
+    position: relative; 
+    max-width: 180px;
+  }
+  
+  .header-user .user-name {
+    max-width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Fix dropdown menu positioning */
+  .user-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 220px;
+  background-color: var(--bg);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1200;  
+  overflow: hidden;
+  transition: all 0.3s ease;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    gap: 1.5rem;
+  }
+  
+  .header-title {
+    width: 100%;
+  }
+  
+  .header-actions {
+    margin-left: auto; /* Push to the right */
+  }
+  
+  /* Simplified user dropdown for smaller screens */
+  .header-user {
+    background: transparent;
+    padding: 0.5rem;
+    box-shadow: none;
+  }
+  
+  .header-user .user-name {
+    display: none;
+  }
+  
+  /* Ensure dropdown appears in the right place */
+  .user-dropdown {
+    top: calc(100% + 5px);
+    right: 0;
+    width: 200px;
+  }
+}
+
+@media (max-width: 546px) {
+/* Very small screens */
+  .dashboard-header {
+    z-index: 10;
+   position: relative;
+    padding: 1.2rem;
+  }
+  
+  .header-title h1 {
+    font-size: 1.8rem;
+  }
+  
+  .date-display {
+    font-size: 1.2rem;
+  }
+  
+  .action-button {
+    font-size: 1.8rem;
+  }
+  
+  /* Position dropdown relative to viewport */
+  .user-dropdown {
+    width: 100%;
+  }
+}
+  
+  @keyframes slideUpDropdown {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+  
+  /* Dim background when dropdown is open */
+  .header-user:hover::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1040;
+    animation: fadeBackground 0.3s ease;
+  }
+  
+  @keyframes fadeBackground {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+.dashboard-welcome {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.dashboard-user {
+  font-size: 1.8rem;
+  opacity: 0.9;
+}
+
+.dashboard-badge {
+  background-color: #ffcc00;
+  color: #333;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+.dashboard-content {
+  padding: 3rem;
+  flex: 1;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--light) 100%);
+}
+
+.dashboard-section {
+  margin-bottom: 4rem;
+}
+
+.dashboard-section-title {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 1rem;
+}
+
+.dashboard-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.stat-icon {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.stat-value {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1.4rem;
+  color: #777;
+}
+
+.admin-section {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 2rem;
+  border: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.admin-section-title {
+  font-size: 1.8rem;
+  color: #054905;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  background-color: #e53e3e;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(229, 62, 62, 0.2);
+  border: none;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #c53030;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(229, 62, 62, 0.3);
+}
+
+.logout-icon {
+  margin-right: 1rem;
+}
+/* Dashboard text styles */
+.dashboard-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* Quick links styling */
+.quick-links-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.quick-link-button {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2rem;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quick-link-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.profile-button {
+  background-color: #10b981; /* Green */
+}
+
+.profile-button:hover {
+  background-color: #059669;
+}
+
+.tasks-button {
+  background-color: #3b82f6; /* Blue */
+}
+
+.tasks-button:hover {
+  background-color: #2563eb;
+}
+
+.calendar-button {
+  background-color: #8b5cf6; /* Purple */
+}
+
+.calendar-button:hover {
+  background-color: #7c3aed;
+}
+
+.settings-button {
+  background-color: #6b7280; /* Gray */
+}
+
+.settings-button:hover {
+  background-color: #4b5563;
+}
+
+/* Admin section grid styling */
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.admin-card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.login-heading {
+  font-size: 3.5rem !important;
+  margin-bottom: 10px !important;
+  font-weight: 800 !important; /* Extra bold */
+  color: rgba(245, 101, 4, 0.96);
+}
+
+/* Override the default h2 styling */
+.login-center h2.login-heading {
+  font-weight: 800 !important;
+}
+/* Create this file at: frontend/src/notification.css */
+/* Fix notification styling */
+.notification {
+  position: fixed;
+  top: -2px;
+  right: -7px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  width: auto;
+  min-width: 40px;
+  max-width: 350px;
+  animation: slideIn 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.notification.closing {
+  animation: slideOut 0.3s ease-out forwards;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.notification-content svg {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.notification-content span {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.8rem;
+  padding: 4px;
+  margin-left: 8px;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+/* Update success/error/info notification styles */
+.error {
+  background-color: #fff8f8;
+  color: #d32f2f;
+  border-left: 4px solid #d32f2f;
+}
+
+.success {
+  background-color: #f1f8e9;
+  color: #2e7d32;
+  border-left: 4px solid #2e7d32;
+}
+
+.info {
+  background-color: #e1f5fe;
+  color: #0288d1;
+  border-left: 4px solid #0288d1;
+}
+/* Add to your index.css */
+.file-upload-section {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.section-icon {
+  font-size: 2.4rem;
+  color: rgb(5, 73, 5);
+  margin-right: 1rem;
+}
+
+.upload-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.file-input-container {
+  flex: 1;
+}
+
+.file-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.file-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 2rem;
+  background-color: #f9f9f9;
+  border: 2px dashed rgb(5, 73, 5);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: rgb(5, 73, 5);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-label:hover {
+  background-color: rgba(5, 73, 5, 0.05);
+}
+
+.upload-button {
+  padding: 1.2rem 2.5rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+}
+
+.upload-button:hover {
+  background-color: #266e29;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3);
+}
+
+.upload-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.upload-status {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  animation: fadeIn 0.3s ease-in;
+  transition: opacity 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.upload-status.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-left: 5px solid #2e7d32;
+}
+
+.upload-status.error {
+  background-color: #ffebee;
+  color: #d32f2f;
+  border-left: 5px solid #d32f2f;
+}
+
+.upload-status .status-icon {
+  font-size: 2.2rem;
+  margin-right: 15px;
+}
+
+.upload-status .status-message {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.parsed-data-preview {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Enhanced File Upload Styling */
+.file-upload-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 90%;  /* Make it a bit wider */
+}
+
+.file-upload-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.file-upload-title h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.file-upload-title p {
+  font-size: 1.6rem;
+  color: #666;
+}
+
+.back-button {
+  background-color: #f2f2f2;
+  color: #555;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+}
+
+.back-button:hover {
+  background-color: #e5e5e5;
+}
+.back-button svg {
+  font-size: 1.4rem;
+  margin-top: 1px; /* Small adjustment to perfectly center the icon */
+}
+/* Enhanced Upload Area Styling */
+.upload-area {
+  border: 2px dashed #a5d6a7;
+  border-radius: 10px;
+  background-color: #e8f5e9;
+  padding: 60px 20px;  /* Increased padding to make it taller */
+  text-align: center;
+  margin-bottom: 25px;
+  position: static;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;  /* Increased height */
+  width: 100%;  /* Ensure it takes full width */
+}
+
+/* Make the upload icon larger and more visible */
+.upload-icon {
+  font-size: 6.0rem;  /* Increased size */
+  color: #757575;
+  margin-bottom: 17px;  /* More space below icon */
+  display: inline-block;
+}
+
+/* Add a subtle container for the icon */
+.upload-icon-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+}
+
+/* Style the help text */
+.upload-prompt h3 {
+  font-size: 1.8rem;
+  color: #444;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.upload-prompt p {
+  font-size: 1.6rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Make the browse button more prominent */
+.browse-button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 28px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 20px 0;
+  box-shadow: 0 2px 6px rgba(46, 125, 50, 0.2);
+}
+
+.browse-button:hover {
+  background-color: #228B22;
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Update success notification to match screenshot */
+.upload-status.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-left: 4px solid #2e7d32;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.upload-status .status-icon {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.upload-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.upload-button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 32px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.upload-button:hover {
+  background-color: #228B22;
+  box-shadow: 0 2px 10px rgba(46, 125, 50, 0.2);
+}
+
+.upload-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.upload-status {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.upload-status .status-icon {
+  font-size: 2rem;
+  margin-right: 15px;
+}
+
+.upload-status .status-message {
+  font-size: 1.5rem;
+}
+
+.upload-status.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.upload-status.success .status-icon {
+  color: #2e7d32;
+}
+
+.upload-status.error {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.upload-status.error .status-icon {
+  color: #d32f2f;
+}
+
+/* Improved selected file display */
+.selected-file {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid rgba(46, 125, 50, 0.2);
+}
+
+.file-icon {
+  font-size: 3.2rem;
+  color: var(--primary);
+  margin-right: 20px;
+}
+
+.file-info {
+  flex: 1;
+}
+
+.file-info h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.file-info p {
+  font-size: 1.4rem;
+  color: #777;
+}
+
+.file-actions {
+  display: flex;
+  align-items: center;
+}
+
+.remove-file-btn {
+  background: none;
+  border: none;
+  color: #ff5252;
+  font-size: 2.4rem;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-file-btn:hover {
+  background-color: rgba(255, 82, 82, 0.1);
+  transform: scale(1.1);
+  color: #d32f2f;
+}
+
+/* Multiple file upload styling */
+.selected-files {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.files-header {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+  width: 100%;
+  text-align: left;
+  padding-left: 5%;
+}
+
+.files-list {
+  width: 100%;
+  max-height: 320px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px;
+  padding-right: 5px;
+}
+
+.files-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.files-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.files-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+.files-list::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+.selected-file {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid rgba(46, 125, 50, 0.15);
+  transition: all 0.2s ease;
+}
+
+.selected-file:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.file-info h4 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+  max-width: 320px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-progress {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  min-width: 80px;
+}
+
+.progress-bar {
+  height: 8px;
+  width: 60px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-right: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 1.2rem;
+  color: #555;
+  min-width: 36px;
+  text-align: right;
+}
+
+.progress-complete {
+  color: var(--primary);
+  font-size: 2rem;
+}
+
+.progress-failed {
+  color: #d32f2f;
+  font-size: 2rem;
+}
+
+.complete-icon,
+.failed-icon {
+  margin-left: auto;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  font-size: 1.8rem;
+  color: #666;
+  margin-left: auto;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.add-more-files {
+  margin: 20px 0 5px;
+}
+
+.add-files-button {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px dashed var(--primary);
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-files-button:hover {
+  background-color: rgba(46, 125, 50, 0.05);
+  transform: translateY(-2px);
+}
+
+.upload-status.partial {
+  background-color: #fff8e1;
+  color: #f57c00;
+  border-left: 4px solid #f57c00;
+}
+
+.uploaded-files-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(269px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.uploaded-file-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+}
+
+.file-card-icon {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-right: 16px;
+}
+
+.file-card-details h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+.file-card-details p {
+  font-size: 1.4rem;
+  color: #666;
+  margin: 4px 0;
+}
+/* Add responsive styles for file upload section */
+@media (max-width: 768px) {
+  .file-upload-title h2 {
+    font-size: 2rem; /* Reduce size of "Upload Data for project" */
+  }
+  
+  .file-upload-title p {
+    font-size: 1.4rem; /* Reduce size of subtitle text */
+  }
+}
+
+@media (max-width: 576px) {
+  .file-upload-container {
+    padding: 20px 15px; /* Reduce padding on very small screens */
+  }
+  
+  .file-upload-title h2 {
+    font-size: 2.4rem; /* Further reduce main title size */
+    line-height: 1.3;
+  }
+  
+  .file-upload-title p {
+    font-size: 1.3rem; /* Further reduce subtitle size */
+    margin-top: 5px;
+  }
+  
+  .upload-area {
+    padding: 30px 15px; /* Reduce upload area padding */
+    min-height: 220px; /* Slightly shorter on mobile */
+  }
+  
+  .upload-icon {
+    font-size: 4rem; /* Smaller upload icon */
+  }
+  
+  .upload-icon-container {
+    width: 80px; /* Smaller icon container */
+    height: 80px;
+    margin-bottom: 15px;
+  }
+  
+  .upload-prompt h3 {
+    font-size: 1.6rem;
+  }
+  
+  .upload-prompt p {
+    font-size: 1.4rem;
+  }
+}
+
+/* Special adjustments for very small devices */
+@media (max-width: 380px) {
+  .file-upload-title h2 {
+    font-size: 1.6rem;
+  }
+  
+  .file-upload-title p {
+    font-size: 1.2rem;
+  }
+  
+  .browse-button {
+    padding: 10px 20px;
+    font-size: 1.4rem;
+  }
+}
+
+.three-d-chart-container {
+  width: 100%;
+  height: 750px; /* Increased from 650px to match chart-wrapper */
+  background-color: rgb(23, 25, 35);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  overflow: visible; /* Changed from hidden to prevent cutting off */
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 0 20px 0;
+  box-sizing: border-box;
+}
+
+.three-d-chart-container.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #4CAF50;
+   background-color: rgb(23, 25, 35);
+}
+
+.chart-loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(76, 175, 80, 0.2);
+  border-top: 3px solid #4CAF50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+.three-d-chart-container.loading p {
+  color: white;
+  font-size: 1.6rem;
+  margin-top: 15px;
+}
+
+/* Style Plotly controls better in dark theme */
+.three-d-chart-container .modebar {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 6px !important;
+  padding: 4px !important;
+}
+
+.three-d-chart-container .modebar-btn path {
+  fill: rgba(255, 255, 255, 0.7) !important;
+}
+
+.three-d-chart-container .modebar-btn:hover path {
+  fill: white !important;
+}
+
+/* Adjust tooltip styling */
+.three-d-chart-container .hovertext {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Add glow effect to chart elements */
+.three-d-chart-container .point, 
+.three-d-chart-container .scatter {
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.three-d-performance-warning {
+  background-color: rgba(255, 248, 225, 0.9);
+  border-left: 4px solid #f57c00;
+  padding: 14px 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  color: #333;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.three-d-performance-warning svg {
+  color: #f57c00;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.three-d-performance-warning span {
+  flex: 1;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.4;
+}
+
+/* Extra styles for better 3D chart layout */
+[data-charttype^="3d"] .three-d-chart-container {
+  margin-top: 10px;
+}
+
+/* Media query adjustments */
+@media (max-width: 768px) {
+  .chart-wrapper,
+  .three-d-chart-container {
+    height: 500px; /* Reduced but still adequate for mobile */
+  }
+  
+  .analyze-data-container {
+    padding: 15px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 576px) {
+  .chart-wrapper,
+  .three-d-chart-container {
+    height: 450px; /* Further reduced for very small screens */
+  }
+  
+  .analyze-data-container {
+    padding: 10px;
+    width: 98%;
+  }
+}
+.chart-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 15px;
+  margin: 0 0 20px 0;
+  box-sizing: border-box;
+}
+/* Update the text styling for better readability */
+.three-d-chart-container .text {
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9), 
+               0px 0px 3px rgba(0, 0, 0, 0.9);
+  font-weight: 600 !important;
+  opacity: 0.9;
+}
+
+/* Add these additional styles for the bar chart values */
+.three-d-chart-container .textpoint {
+  opacity: 0.85 !important;
+  pointer-events: none !important;
+}
+
+/* Add a subtle text highlight */
+.three-d-chart-container text.nums {
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.85));
+}
+/* Ensure main SVG occupies full space */
+.main-svg {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: visible !important;
+}
+
+/* Fix for Plotly modebar positioning */
+.modebar-container {
+  right: 10px !important;
+  top: 10px !important;
+}
+
+/* Special override for data visualization section */
+.data-visualization-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.analyze-data-container[data-has-3d-chart="true"] {
+  height: auto;
+  min-height: 900px; 
+  padding-bottom: 40px;
+}
+/* Chart Download Button Styling */
+.chart-controls-overlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+}
+
+.chart-download-btn {
+  background-color: rgba(46, 125, 50, 0.8);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.chart-download-btn:hover {
+  background-color: rgba(46, 125, 50, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.three-d-chart-container .chart-controls-overlay {
+  top: 15px;
+  left: 15px;
+}
+
+.three-d-chart-container .chart-download-btn {
+  background-color: rgba(76, 175, 80, 0.9);
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+}
+
+.three-d-chart-container .chart-download-btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
