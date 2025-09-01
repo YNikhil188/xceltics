@@ -1,269 +1,209 @@
-# Excel Analytics Platform
+Xceltics Platform
+Last Updated: September 1, 2025
 
-Last Updated: July 25, 2025
+A full-stack, AI-driven data analytics platform for processing Excel/CSV files, generating interactive 3D visualizations, and extracting intelligent insights through advanced machine learning.
 
-A comprehensive full-stack web application for analyzing Excel data with advanced AI insights, authentication, role-based access control, and modern data visualization capabilities.
+🚀 Project Overview
+Xceltics is an end-to-end analytics platform designed to make working with Excel/CSV files more powerful, interactive, and insightful. By combining modern web technologies with AI integration, Xceltics allows users to securely upload, analyze, and visualize large datasets in real time.
 
-## 🚀 Project Overview
+With features like role-based authentication, AI-powered insights, and 3D visualizations, Xceltics redefines how businesses and researchers interact with data.
 
-The Excel Analytics Platform is a sophisticated data analysis tool that combines the power of Excel file processing with artificial intelligence to provide meaningful insights from your data. Built with modern web technologies, it offers a seamless experience for uploading, analyzing, and visualizing data with interactive 3D charts and AI-powered analytics.
+🛠️ Tech Stack
+Frontend
+⚡ React.js with Vite – Fast, modern frontend development
 
-## 🛠️ Tech Stack
+🗂 Redux Toolkit – Predictable state management
 
-### Frontend
-- **React.js with Vite** - Fast development and build tool
-- **Redux Toolkit** - Predictable state management
-- **React Router v7** - Client-side routing
-- **Tailwind CSS** - Utility-first CSS framework
-- **Axios** - HTTP client for API requests
-- **React Icons** - Beautiful icon library
-- **GSAP** - Professional-grade animations
-- **Plotly.js** - Interactive 3D data visualizations
+🛣 React Router v7 – Seamless client-side navigation
 
-### Backend
-- **Node.js & Express.js** - Server-side JavaScript runtime and framework
-- **MongoDB with Mongoose** - NoSQL database with object modeling
-- **JWT** - Secure authentication tokens
-- **Bcrypt** - Password hashing and encryption
-- **CORS** - Cross-origin resource sharing
-- **SendGrid** - Email service integration
-- **GridFS** - Large file storage solution
-- **Google Gemini AI** - Advanced AI analytics and insights
+🎨 Tailwind CSS – Utility-first styling framework
 
-### Additional Tools
-- **Multer** - File upload handling
-- **XLSX** - Excel file parsing and processing
-- **Crypto** - Secure token generation
+🌐 Axios – Simplified HTTP requests
 
-## ✨ Key Features
+🖼 React Icons – Rich icon library
 
-### 🔐 Authentication & Security
-- Complete user registration and login system
-- JWT-based secure authentication
-- Role-based access control (Admin/User)
-- Password reset functionality with email integration
-- Protected routes on both frontend and backend
-- Secure password hashing with bcrypt
-- Token-based API access
+🎞 GSAP – Professional-grade animations
 
-### 📁 File Management
-- Drag-and-drop Excel/CSV file upload
-- GridFS integration for large file storage (>16MB)
-- Real-time upload progress tracking
-- File validation and error handling
-- Support for multiple file formats (.xlsx, .xls, .csv)
-- Automatic file preview generation
-- Persistent file selection across sessions
+📊 Plotly.js – Interactive 3D visualizations
 
-### 📊 Data Visualization
-- Interactive 3D visualizations with Plotly.js
-- Six different 3D chart types:
-  - 3D Bar Charts with dynamic spacing
-  - 3D Scatter Plots with intelligent sizing
-  - 3D Surface Plots with gradient coloring
-  - 3D Line Charts with smooth curves
-  - 3D Area Charts with transparency
-  - 3D Pie Charts with elevation effects
-- Responsive design for all screen sizes
-- Custom tooltips and interactive controls
-- Performance optimization for large datasets
+Backend
+🖥 Node.js & Express.js – Scalable backend runtime
 
-### 🤖 AI-Powered Analytics
-- Google Gemini AI integration for data insights
-- Natural language querying of your data
-- Automated pattern recognition
-- Statistical analysis and recommendations
-- Smart data type detection
-- Contextual insights based on data content
+🗄 MongoDB with Mongoose – Flexible NoSQL database
 
-### 🎨 User Interface
-- Modern, responsive dashboard design
-- Engaging intro animations with GSAP
-- Mobile-first responsive design
-- Real-time notifications system
-- Custom form components
-- Intuitive navigation and user experience
+🔑 JWT – Secure authentication with tokens
 
-## 📈 Development Progress
+🔒 Bcrypt – Strong password hashing
 
-### Week 1: Foundation
-- Established project structure and basic authentication
-- Set up MongoDB database connectivity
-- Created initial dashboard layout
-- Configured development environment
-- Implemented JWT authentication basics
+🌍 CORS – Safe cross-origin support
 
-### Week 2: Authentication & File Handling
-**Major Achievements:**
-- ✅ Complete authentication flow (login, signup, logout)
-- ✅ Password reset with email integration via SendGrid
-- ✅ Role-based access control implementation
-- ✅ Drag-and-drop file upload with progress tracking
-- ✅ GridFS integration for large file storage
-- ✅ GSAP animations for engaging user experience
-- ✅ Responsive design for mobile and tablet devices
-- ✅ Custom form components with validation
+📧 SendGrid – Email service for password recovery
 
-**Technical Implementations:**
-- Integrated SendGrid for secure email communications
-- Enhanced Excel file handling with GridFS for files beyond MongoDB's 16MB limit
-- Added comprehensive error handling across all API endpoints
-- Created admin-specific dashboard sections with role-based UI
-- Implemented secure password handling and JWT token management
+🗂 GridFS – Large file storage system
 
-### Week 3: Data Analysis & Visualization
-**Major Achievements:**
-- ✅ Fixed critical MongoDB ObjectId constructor bugs
-- ✅ Implemented automatic file selection and persistence
-- ✅ Enhanced file analysis with metadata display
-- ✅ Created unified CSV and Excel file handling
-- ✅ Advanced 3D visualization implementation with Plotly.js
-- ✅ Six different 3D chart types with optimized performance
-- ✅ Responsive image slider for login page
+🤖 Google Gemini AI – Advanced AI-powered data insights
 
-**Technical Breakthroughs:**
-- Resolved WebGL compatibility issues across browsers
-- Implemented intelligent data type detection for chart selection
-- Created adaptive data sampling for large datasets
-- Added progressive loading for complex 3D visualizations
-- Enhanced user experience with seamless file-to-analysis transitions
+Additional Tools
+📥 Multer – File upload handling
 
-**3D Visualization Features:**
-- 3D Bar Charts with dynamic spacing and text positioning
-- 3D Scatter Plots with intelligent marker sizing
-- 3D Surface Plots with gradient coloring
-- 3D Line Charts with smooth trend visualization
-- 3D Area Charts with semi-transparent surfaces
-- 3D Pie Charts with category elevation effects
+📑 XLSX – Excel parsing & processing
 
-### Week 4: UI/UX Refinement & AI Integration
-**Major Achievements:**
-- ✅ Resolved button styling conflicts across components
-- ✅ Enhanced AI Insights component functionality
-- ✅ Improved visual consistency of interactive elements
-- ✅ Google Gemini AI integration for data analysis
-- ✅ Natural language querying capabilities
-- ✅ Advanced CSS architecture improvements
+🔐 Crypto – Token & key generation utilities
 
-**Technical Optimizations:**
-- Implemented utility classes for selective style overrides
-- Created reusable style patterns for consistent appearance
-- Enhanced responsive design for varying screen sizes
-- Added AI-powered insights with contextual analysis
-- Improved CSS selector specificity to prevent conflicts
+✨ Key Features
+🔐 Authentication & Security
+User registration, login & logout
 
-## 🚀 Getting Started
+JWT-based secure sessions
 
-### Prerequisites
-Before you begin, ensure you have the following installed:
-- **Node.js** (v16 or higher) - [Download here](https://nodejs.org/)
-- **MongoDB** (local installation or Atlas account) - [Download here](https://www.mongodb.com/)
-- **npm** or **yarn** package manager
-- **Git** for version control
+Role-based access (Admin / User)
 
-### 📥 Installation
+Email-based password reset with SendGrid
 
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/shanmugapriyar0/Excel_Analytics_Platform.git
-   cd Excel_Analytics_Platform
-   ```
+Protected frontend & backend routes
 
-2. **Install Backend Dependencies**
-   ```bash
-   cd backend
-   npm install
-   ```
+Strong encryption with bcrypt
 
-3. **Install Frontend Dependencies**
-   ```bash
-   cd ../frontend
-   npm install
-   ```
+📁 File Management
+Drag-and-drop Excel/CSV upload
 
-### 🔧 Environment Configuration
+GridFS support for >16MB files
 
-#### Setting Up Backend Environment
-1. Create a `.env` file in the `backend` directory:
-   ```bash
-   cd backend
-   touch .env  # On Windows: echo. > .env
-   ```
+Real-time upload progress
 
-2. Add the following environment variables to your `.env` file:
-   ```env
-   # MongoDB Configuration
-   MONGO_URI=mongodb://localhost:27017/excel_analytics_platform
-   # For MongoDB Atlas: mongodb+srv://<username>:<password>@cluster.mongodb.net/excel_analytics_platform
+Multi-format support: .xlsx, .xls, .csv
 
-   # JWT Configuration
-   JWT_SECRET=your_super_secure_jwt_secret_key_here_make_it_very_long_and_random
-   
-   # SendGrid Email Configuration (for password reset)
-   SENDGRID_API_KEY=your_sendgrid_api_key_here
-   SENDGRID_FROM_EMAIL=your_verified_email@domain.com
-   
-   # Google Gemini AI Configuration
-   GEMINI_API_KEY=your_google_gemini_api_key_here
-   
-   # Application Configuration
-   FRONTEND_URL=http://localhost:3000
-   NODE_ENV=development
-   PORT=5000
-   ```
+File preview & metadata extraction
 
-#### 🔑 API Keys Setup Guide
+Session persistence for uploaded files
 
-**1. MongoDB Setup**
-- **Local MongoDB**: Install MongoDB locally and use the default connection string
-- **MongoDB Atlas**: 
-  - Go to [MongoDB Atlas](https://www.mongodb.com/atlas)
-  - Create a free account and cluster
-  - Get your connection string from the "Connect" button
-  - Replace `<username>` and `<password>` with your database credentials
+📊 Data Visualization
+Six types of 3D interactive charts using Plotly.js:
 
-**2. JWT Secret Generation**
-Generate a secure JWT secret using Node.js:
-```bash
-node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
-```
+3D Bar
 
-**3. SendGrid Configuration** (for email functionality)
-- Visit [SendGrid](https://sendgrid.com/) and create a free account
-- Navigate to Settings → API Keys
-- Create a new API key with "Mail Send" permissions
-- Verify a sender email address in Settings → Sender Authentication
-- Use the verified email as `SENDGRID_FROM_EMAIL`
+3D Scatter
 
-**4. Google Gemini AI Setup** (for AI insights)
-- Go to [Google AI Studio](https://aistudio.google.com/)
-- Create a new project or use an existing one
-- Generate an API key for Gemini AI
-- Copy the API key to your `.env` file
+3D Surface
 
-### 🚀 Running the Application
+3D Line
 
-1. **Start the Backend Server**
-   ```bash
-   cd backend
-   npm start
-   # Development mode with auto-restart:
-   npm run dev
-   ```
-   The backend will run on `http://localhost:5000`
+3D Area
 
-2. **Start the Frontend Development Server**
-   ```bash
-   cd frontend
-   npm run dev
-   ```
-   The frontend will run on `http://localhost:3000`
+3D Pie
 
-3. **Access the Application**
-   - Open your browser and navigate to `http://localhost:3000`
-   - Create a new account or use the login functionality
-   - Start uploading and analyzing your Excel files!
+Responsive & mobile-friendly dashboards
 
+Tooltips and zoom/rotate controls
+
+Optimized performance for large datasets
+
+🤖 AI-Powered Analytics
+Integration with Google Gemini AI
+
+Natural language queries on uploaded data
+
+Automated insights & recommendations
+
+Smart pattern detection
+
+Statistical summaries & anomaly detection
+
+🎨 User Experience
+Clean, responsive dashboard design
+
+GSAP-powered animations
+
+Real-time notifications
+
+Intuitive navigation & UI components
+
+Mobile-first experience
+
+📈 Development Roadmap
+Week 1: Foundation
+✅ Project structure setup
+
+✅ MongoDB connectivity
+
+✅ JWT authentication basics
+
+✅ Initial dashboard layout
+
+Week 2: Authentication & File Handling
+✅ Full authentication flow
+
+✅ Password reset via email (SendGrid)
+
+✅ Role-based access control
+
+✅ File uploads with progress & GridFS
+
+✅ Custom forms with validation
+
+Week 3: Data Analysis & Visualization
+✅ Unified Excel & CSV handling
+
+✅ File preview & metadata display
+
+✅ Six 3D chart types with Plotly.js
+
+✅ Intelligent type detection for visualization
+
+✅ Performance optimizations for large datasets
+
+Week 4: AI & UX Enhancements
+✅ Gemini AI integration for smart insights
+
+✅ Natural language data queries
+
+✅ Polished responsive design
+
+✅ Improved interactive dashboard experience
+
+🚀 Getting Started
+Prerequisites
+Node.js v16+
+
+MongoDB (local or Atlas)
+
+npm or yarn
+
+Git
+
+Installation
+Clone repository:
+
+git clone https://github.com/<your-username>/Xceltics.git
+cd Xceltics
+Install backend dependencies:
+
+cd backend
+npm install
+Install frontend dependencies:
+
+cd ../frontend
+npm install
+🔧 Environment Configuration
+Create .env in backend/:
+
+# MongoDB
+MONGO_URI=mongodb://localhost:27017/xceltics
+
+# JWT
+JWT_SECRET=super_secure_random_key
+
+# SendGrid
+SENDGRID_API_KEY=your_sendgrid_key
+SENDGRID_FROM_EMAIL=your_verified_email@example.com
+
+# Gemini AI
+GEMINI_API_KEY=your_gemini_api_key
+
+# App Config
+FRONTEND_URL=http://localhost:3000
+NODE_ENV=development
+PORT=5000
 ## 📁 Project Structure
 
 ```
@@ -311,166 +251,72 @@ Excel_Analytics_Platform/
 └── 📄 .gitignore                 # Git ignore rules
 ```
 
-## 🔌 API Endpoints
+🔌 API Endpoints
+Authentication
+POST /api/auth/signup
+POST /api/auth/login
+POST /api/auth/forgot-password
+POST /api/auth/reset-password
+GET  /api/auth/verify-token
+File Management
+POST /api/excel/upload
+GET  /api/excel/files
+GET  /api/excel/download/:id
+DELETE /api/excel/delete/:id
+POST /api/excel/analyze
+User
+GET  /api/user/profile
+PUT  /api/user/profile
+GET  /api/user/activity
+🛠 Available Scripts
+Backend
+npm start        # Start server
+npm run dev      # Development mode
+Frontend
+npm run dev      # Start Vite dev server
+npm run build    # Production build
+npm run preview  # Preview build
+npm run lint     # Lint code
+🔍 Troubleshooting
+MongoDB connection error
+Ensure MongoDB service is running.
 
-### Authentication Endpoints
-```
-POST /api/auth/signup          # Register new user
-POST /api/auth/login           # User authentication
-POST /api/auth/forgot-password # Request password reset
-POST /api/auth/reset-password  # Reset password with token
-GET  /api/auth/verify-token    # Verify JWT token validity
-```
+Port conflict
+Kill process using port 5000 or 3000.
 
-### File Management Endpoints
-```
-POST /api/excel/upload         # Upload Excel/CSV files
-GET  /api/excel/files          # Get user's uploaded files
-GET  /api/excel/download/:id   # Download specific file
-DELETE /api/excel/delete/:id   # Delete uploaded file
-POST /api/excel/analyze        # Analyze file data with AI
-```
+File upload issues
+Check uploads/ directory and GridFS setup.
 
-### User Management Endpoints
-```
-GET  /api/user/profile         # Get user profile
-PUT  /api/user/profile         # Update user profile
-GET  /api/user/activity        # Get user activity log
-```
+AI insights not working
+Validate Gemini API key and quota.
 
-## 🎯 Features in Detail
+🤝 Contributing
+Fork repo
 
-### File Upload & Processing
-- **Drag & Drop Interface**: Intuitive file upload with visual feedback
-- **Multiple Format Support**: Excel (.xlsx, .xls) and CSV files
-- **Large File Handling**: GridFS integration for files exceeding 16MB
-- **Real-time Progress**: Live upload progress with percentage display
-- **File Validation**: Automatic format and size validation
-- **Preview Generation**: Instant data preview after upload
+Create feature branch
 
-### AI-Powered Analytics
-- **Natural Language Queries**: Ask questions about your data in plain English
-- **Automated Insights**: Get intelligent analysis without manual configuration
-- **Pattern Recognition**: Discover hidden trends and correlations
-- **Statistical Analysis**: Comprehensive statistical summaries
-- **Contextual Recommendations**: AI suggests relevant analysis approaches
+Commit changes with clear message
 
-### Advanced Visualizations
-- **Interactive 3D Charts**: Rotate, zoom, and explore your data in three dimensions
-- **Multiple Chart Types**: Bar, scatter, surface, line, area, and pie charts
-- **Performance Optimized**: Handles large datasets with intelligent sampling
-- **Responsive Design**: Charts adapt to different screen sizes
-- **Custom Styling**: Consistent color schemes and professional appearance
+Push to branch
 
-### User Experience
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
-- **Real-time Notifications**: Instant feedback on user actions
-- **Persistent Sessions**: Remember user preferences and selections
-- **Loading States**: Clear indication of processing status
-- **Error Handling**: Graceful error messages and recovery options
+Open Pull Request with description & screenshots
 
-## 🛠️ Available Scripts
+📝 License
+Licensed under the MIT License – see LICENSE.
 
-### Backend Scripts
-```bash
-npm start          # Start production server
-```
+🙏 Acknowledgments
+React for frontend framework
 
-### Frontend Scripts
-```bash
-npm start        # Start Vite development server
-npm run build      # Build for production
-npm run preview    # Preview production build
-npm run lint       # Run ESLint
-```
+MongoDB for NoSQL database
 
-## 🔍 Troubleshooting
+Google Gemini AI for intelligent insights
 
-### Common Issues and Solutions
+Plotly for 3D visualizations
 
-**1. MongoDB Connection Error**
-```bash
-# Ensure MongoDB is running
-# Windows: Start MongoDB service
-# macOS/Linux: sudo systemctl start mongod
-```
+SendGrid for email integration
 
-**2. Port Already in Use**
-```bash
-# Kill process on port 5000 (backend)
-# Windows: netstat -ano | findstr :5000 && taskkill /PID <PID> /F
-# macOS/Linux: lsof -ti:5000 | xargs kill -9
-```
+Open Source Community ❤️
 
-**3. File Upload Issues**
-- Check if `uploads/` directory exists in backend
-- Verify MongoDB GridFS configuration
-- Ensure sufficient disk space
-
-**4. AI Analysis Not Working**
-- Verify Gemini API key is valid and has quota
-- Check internet connectivity
-- Review API key permissions
-
-## 🤝 Contributing
-
-We welcome contributions! Please follow these steps:
-
-1. **Fork the Repository**
-   ```bash
-   git fork https://github.com/shanmugapriyar0/Excel_Analytics_Platform.git
-   ```
-
-2. **Create a Feature Branch**
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-
-3. **Make Your Changes**
-   - Follow existing code style and patterns
-   - Add tests for new functionality
-   - Update documentation as needed
-
-4. **Commit Your Changes**
-   ```bash
-   git commit -m "Add: Amazing new feature"
-   ```
-
-5. **Push to Your Branch**
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-
-6. **Open a Pull Request**
-   - Provide a clear description of changes
-   - Include screenshots for UI changes
-   - Reference any related issues
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **React Team** for the amazing frontend framework
-- **MongoDB** for the robust database solution
-- **Google** for the powerful Gemini AI integration
-- **Plotly** for the incredible 3D visualization capabilities
-- **SendGrid** for reliable email services
-- **Open Source Community** for the countless libraries that made this possible
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-
-1. Check the [Issues](https://github.com/shanmugapriyar0/Excel_Analytics_Platform/issues) page
-2. Create a new issue with detailed information
-3. Include error messages and steps to reproduce
-4. Provide system information (OS, Node.js version, etc.)
-
----
-
-**Built with ❤️ by the Excel Analytics Platform Team**
-
-*Making data analysis accessible and insightful for everyone*
+Built with ❤️ by the Xceltics Team
+Simplifying data analytics through intelligence and visualization.
 
