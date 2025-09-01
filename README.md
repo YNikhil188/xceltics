@@ -51,8 +51,8 @@
 ## 🔑 Core Features  
 
 ### Security & Authentication  
-- ✔ User registration & login  
-- ✔ JWT-based auth with refresh tokens  
+✔ User registration & login    
+✔ JWT-based auth with refresh tokens    
 - ✔ Role-based access (Admin/User)  
 - ✔ Email-based password reset (SendGrid)  
 - ✔ Hashed passwords for maximum security  
