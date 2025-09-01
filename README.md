@@ -1,322 +1,273 @@
-Xceltics Platform
-Last Updated: September 1, 2025
 
-A full-stack, AI-driven data analytics platform for processing Excel/CSV files, generating interactive 3D visualizations, and extracting intelligent insights through advanced machine learning.
+# 📊 Xcelitics – Smarter Data, Smarter Decisions
 
-🚀 Project Overview
-Xceltics is an end-to-end analytics platform designed to make working with Excel/CSV files more powerful, interactive, and insightful. By combining modern web technologies with AI integration, Xceltics allows users to securely upload, analyze, and visualize large datasets in real time.
+> **Last Updated:** July 25, 2025
 
-With features like role-based authentication, AI-powered insights, and 3D visualizations, Xceltics redefines how businesses and researchers interact with data.
+**Xcelitics** is an advanced full-stack web application designed to transform raw Excel and CSV files into actionable insights. By combining **AI-powered analytics**, **secure authentication**, and **immersive 3D visualizations**, Xcelitics makes data exploration seamless and intuitive for everyone.
 
-🛠️ Tech Stack
-Frontend
-⚡ React.js with Vite – Fast, modern frontend development
+---
 
-🗂 Redux Toolkit – Predictable state management
+## 🌟 Why Xcelitics?
 
-🛣 React Router v7 – Seamless client-side navigation
+* Upload any Excel/CSV file with ease (drag-and-drop support)
+* Explore data through interactive **3D Plotly charts**
+* Get instant, AI-driven insights using **Google Gemini AI**
+* Control access with **role-based security**
+* Built with **modern, high-performance technologies**
 
-🎨 Tailwind CSS – Utility-first styling framework
+---
 
-🌐 Axios – Simplified HTTP requests
+## 🛠 Technology Overview
 
-🖼 React Icons – Rich icon library
+### 🔹 Frontend
 
-🎞 GSAP – Professional-grade animations
+* React.js (Vite) – lightning-fast build system
+* Redux Toolkit – centralized state management
+* React Router v7 – smooth navigation
+* Tailwind CSS – responsive styling framework
+* Axios – robust API client
+* React Icons – icon set
+* GSAP – advanced UI animations
+* Plotly.js – 3D data visualization
 
-📊 Plotly.js – Interactive 3D visualizations
+### 🔹 Backend
 
-Backend
-🖥 Node.js & Express.js – Scalable backend runtime
+* Node.js + Express.js – API backbone
+* MongoDB + Mongoose – scalable NoSQL database
+* JWT + Bcrypt – authentication & encryption
+* CORS – cross-domain communication
+* SendGrid – email/password reset integration
+* GridFS – large file handling
+* Google Gemini AI – intelligent data analytics
 
-🗄 MongoDB with Mongoose – Flexible NoSQL database
+### 🔹 Supporting Tools
 
-🔑 JWT – Secure authentication with tokens
+* Multer – file uploads
+* XLSX – Excel file parsing
+* Crypto – secure token generation
 
-🔒 Bcrypt – Strong password hashing
+---
 
-🌍 CORS – Safe cross-origin support
+## 🔑 Core Features
 
-📧 SendGrid – Email service for password recovery
+### Security & Authentication
 
-🗂 GridFS – Large file storage system
+✔ User registration & login
+✔ JWT-based auth with refresh tokens
+✔ Role-based access (Admin/User)
+✔ Email-based password reset (SendGrid)
+✔ Hashed passwords for maximum security
 
-🤖 Google Gemini AI – Advanced AI-powered data insights
+### File Management
 
-Additional Tools
-📥 Multer – File upload handling
+✔ Drag & drop uploads
+✔ Support: `.xlsx`, `.xls`, `.csv`
+✔ GridFS for files >16MB
+✔ Upload progress tracking
+✔ Session-persistent file selection
+✔ Auto file preview
 
-📑 XLSX – Excel parsing & processing
+### Visualization
 
-🔐 Crypto – Token & key generation utilities
+✔ Interactive 3D charts (Bar, Scatter, Surface, Line, Area, Pie)
+✔ Optimized WebGL performance
+✔ Tooltips, zoom, and rotation
+✔ Adaptive data sampling for large files
+✔ Mobile-friendly responsiveness
 
-✨ Key Features
-🔐 Authentication & Security
-User registration, login & logout
+### AI-Powered Insights
 
-JWT-based secure sessions
+✔ Natural language queries
+✔ Statistical analysis & recommendations
+✔ Pattern/trend recognition
+✔ Context-aware insights via Gemini AI
 
-Role-based access (Admin / User)
+### User Experience
 
-Email-based password reset with SendGrid
+✔ Responsive dashboard design
+✔ GSAP animations for polished UI
+✔ Notifications & error handling
+✔ Smooth file-to-analysis workflow
 
-Protected frontend & backend routes
+---
 
-Strong encryption with bcrypt
+## 📅 Development Roadmap
 
-📁 File Management
-Drag-and-drop Excel/CSV upload
+**Week 1 – Foundation**
 
-GridFS support for >16MB files
+* Project setup, MongoDB connection, JWT basics, initial dashboard
 
-Real-time upload progress
+**Week 2 – Auth & File Handling**
 
-Multi-format support: .xlsx, .xls, .csv
+* Signup/login/logout
+* Password reset (SendGrid)
+* Role-based dashboards
+* File uploads with GridFS & drag-drop
 
-File preview & metadata extraction
+**Week 3 – Data Visualization**
 
-Session persistence for uploaded files
+* Unified Excel/CSV handling
+* 6 interactive 3D charts
+* Bug fixes: ObjectId constructor, WebGL compatibility
+* File persistence + metadata display
 
-📊 Data Visualization
-Six types of 3D interactive charts using Plotly.js:
+**Week 4 – AI & UX Enhancements**
 
-3D Bar
+* Gemini AI integration
+* Natural language querying
+* CSS architecture refinements
+* Resolved button conflicts & improved styles
 
-3D Scatter
+---
 
-3D Surface
+## 🚦 Quick Start
 
-3D Line
+### Requirements
 
-3D Area
+* Node.js ≥ 16
+* MongoDB (local or Atlas)
+* npm / yarn
+* Git
 
-3D Pie
+### Installation
 
-Responsive & mobile-friendly dashboards
+```bash
+# Clone repository
+git clone https://github.com/YNikhil/xcelitics.git
+cd Xcelitics
 
-Tooltips and zoom/rotate controls
-
-Optimized performance for large datasets
-
-🤖 AI-Powered Analytics
-Integration with Google Gemini AI
-
-Natural language queries on uploaded data
-
-Automated insights & recommendations
-
-Smart pattern detection
-
-Statistical summaries & anomaly detection
-
-🎨 User Experience
-Clean, responsive dashboard design
-
-GSAP-powered animations
-
-Real-time notifications
-
-Intuitive navigation & UI components
-
-Mobile-first experience
-
-📈 Development Roadmap
-Week 1: Foundation
-✅ Project structure setup
-
-✅ MongoDB connectivity
-
-✅ JWT authentication basics
-
-✅ Initial dashboard layout
-
-Week 2: Authentication & File Handling
-✅ Full authentication flow
-
-✅ Password reset via email (SendGrid)
-
-✅ Role-based access control
-
-✅ File uploads with progress & GridFS
-
-✅ Custom forms with validation
-
-Week 3: Data Analysis & Visualization
-✅ Unified Excel & CSV handling
-
-✅ File preview & metadata display
-
-✅ Six 3D chart types with Plotly.js
-
-✅ Intelligent type detection for visualization
-
-✅ Performance optimizations for large datasets
-
-Week 4: AI & UX Enhancements
-✅ Gemini AI integration for smart insights
-
-✅ Natural language data queries
-
-✅ Polished responsive design
-
-✅ Improved interactive dashboard experience
-
-🚀 Getting Started
-Prerequisites
-Node.js v16+
-
-MongoDB (local or Atlas)
-
-npm or yarn
-
-Git
-
-Installation
-Clone repository:
-
-git clone https://github.com/<your-username>/Xceltics.git
-cd Xceltics
-Install backend dependencies:
-
+# Backend setup
 cd backend
 npm install
-Install frontend dependencies:
 
+# Frontend setup
 cd ../frontend
 npm install
-🔧 Environment Configuration
-Create .env in backend/:
+```
 
-# MongoDB
-MONGO_URI=mongodb://localhost:27017/xceltics
+### Environment Setup
 
-# JWT
-JWT_SECRET=super_secure_random_key
+Create a `.env` file in `backend/` with:
 
-# SendGrid
-SENDGRID_API_KEY=your_sendgrid_key
-SENDGRID_FROM_EMAIL=your_verified_email@example.com
-
-# Gemini AI
-GEMINI_API_KEY=your_gemini_api_key
-
-# App Config
+```env
+MONGO_URI=mongodb://localhost:27017/xcelitics
+JWT_SECRET=<your_secret_here>
+SENDGRID_API_KEY=<your_api_key_here>
+SENDGRID_FROM_EMAIL=<verified_email>
+GEMINI_API_KEY=<your_gemini_api_key>
 FRONTEND_URL=http://localhost:3000
-NODE_ENV=development
 PORT=5000
-## 📁 Project Structure
-
-```
-Excel_Analytics_Platform/
-├── 📁 backend/                    # Backend API server
-│   ├── 📁 controllers/            # Request handlers
-│   ├── 📁 middleware/             # Authentication & validation
-│   ├── 📁 models/                 # Database schemas
-│   │   ├── 📄 User.js            # User authentication model
-│   │   ├── 📄 ExcelFile.js       # File metadata model
-│   │   └── 📄 Activity.js        # User activity tracking
-│   ├── 📁 routes/                 # API route definitions
-│   │   ├── 📄 authRoutes.js      # Authentication endpoints
-│   │   ├── 📄 excelRoutes.js     # File handling endpoints
-│   │   └── 📄 userRoutes.js      # User management endpoints
-│   ├── 📁 services/               # External service integrations
-│   │   └── 📄 geminiService.js   # AI analysis service
-│   ├── 📁 utils/                  # Utility functions
-│   ├── 📁 uploads/                # File storage directory
-│   ├── 📄 index.js               # Express server entry point
-│   ├── 📄 package.json           # Backend dependencies
-│   └── 📄 .env                   # Environment variables
-├── 📁 frontend/                   # React frontend application
-│   ├── 📁 public/                 # Static assets
-│   ├── 📁 src/                    # Source code
-│   │   ├── 📁 components/         # React components
-│   │   │   ├── 📄 Dashboard.js   # Main dashboard
-│   │   │   ├── 📄 FileUpload.js  # File upload interface
-│   │   │   ├── 📄 AIInsights.js  # AI analysis display
-│   │   │   ├── 📄 ThreeDChart.js # 3D visualization
-│   │   │   ├── 📄 Login.js       # Authentication forms
-│   │   │   └── 📄 Signup.js      # User registration
-│   │   ├── 📁 redux/              # State management
-│   │   │   ├── 📄 store.js       # Redux store configuration
-│   │   │   └── 📄 authSlice.js   # Authentication state
-│   │   ├── 📁 css/                # Stylesheets
-│   │   │   ├── 📄 index.css      # Global styles
-│   │   │   ├── 📄 dashboard.css  # Dashboard styles
-│   │   │   └── 📄 responsive.css # Responsive design
-│   │   ├── 📄 App.js             # Main application component
-│   │   └── 📄 index.js           # React entry point
-│   ├── 📄 package.json           # Frontend dependencies
-│   └── 📄 vite.config.js         # Vite configuration
-├── 📄 README.md                   # Project documentation
-└── 📄 .gitignore                 # Git ignore rules
+NODE_ENV=development
 ```
 
-🔌 API Endpoints
-Authentication
-POST /api/auth/signup
-POST /api/auth/login
-POST /api/auth/forgot-password
-POST /api/auth/reset-password
-GET  /api/auth/verify-token
-File Management
-POST /api/excel/upload
-GET  /api/excel/files
-GET  /api/excel/download/:id
-DELETE /api/excel/delete/:id
-POST /api/excel/analyze
-User
-GET  /api/user/profile
-PUT  /api/user/profile
-GET  /api/user/activity
-🛠 Available Scripts
-Backend
-npm start        # Start server
-npm run dev      # Development mode
-Frontend
-npm run dev      # Start Vite dev server
-npm run build    # Production build
-npm run preview  # Preview build
-npm run lint     # Lint code
-🔍 Troubleshooting
-MongoDB connection error
-Ensure MongoDB service is running.
+---
 
-Port conflict
-Kill process using port 5000 or 3000.
+## ▶ Running the App
 
-File upload issues
-Check uploads/ directory and GridFS setup.
+```bash
+# Start backend
+cd backend
+npm run dev
 
-AI insights not working
-Validate Gemini API key and quota.
+# Start frontend
+cd frontend
+npm run dev
+```
 
-🤝 Contributing
-Fork repo
+* Backend: [http://localhost:5000](http://localhost:5000)
+* Frontend: [http://localhost:3000](http://localhost:3000)
 
-Create feature branch
+---
 
-Commit changes with clear message
+## 📂 Project Layout
 
-Push to branch
+```
+Xcelitics/
+├── backend/
+│   ├── controllers/      # API logic
+│   ├── models/           # MongoDB schemas
+│   ├── routes/           # API endpoints
+│   ├── services/         # AI & email integrations
+│   └── index.js          # Express entry
+├── frontend/
+│   ├── src/
+│   │   ├── components/   # React components
+│   │   ├── redux/        # Redux store & slices
+│   │   └── css/          # Styles
+│   └── vite.config.js    # Build config
+└── README.md
+```
 
-Open Pull Request with description & screenshots
+---
 
-📝 License
-Licensed under the MIT License – see LICENSE.
+## 🔌 API Reference
 
-🙏 Acknowledgments
-React for frontend framework
+### Authentication
 
-MongoDB for NoSQL database
+* `POST /api/auth/signup` – Create account
+* `POST /api/auth/login` – Login
+* `POST /api/auth/forgot-password` – Request reset
+* `POST /api/auth/reset-password` – Reset password
+* `GET  /api/auth/verify-token` – Verify JWT
 
-Google Gemini AI for intelligent insights
+### File Handling
 
-Plotly for 3D visualizations
+* `POST /api/excel/upload` – Upload file
+* `GET  /api/excel/files` – List files
+* `GET  /api/excel/download/:id` – Download file
+* `DELETE /api/excel/delete/:id` – Delete file
+* `POST /api/excel/analyze` – AI-driven analysis
 
-SendGrid for email integration
+### User
 
-Open Source Community ❤️
+* `GET /api/user/profile` – Get profile
+* `PUT /api/user/profile` – Update profile
+* `GET /api/user/activity` – User activity log
 
-Built with ❤️ by the Xceltics Team
-Simplifying data analytics through intelligence and visualization.
+---
+
+## ⚡ Common Issues
+
+* **MongoDB connection fails** → Ensure MongoDB service is running
+* **Port already in use** → Kill process with `lsof -ti:5000 | xargs kill -9`
+* **AI not working** → Check Gemini API key + quota
+
+---
+
+## 🤝 Contribution Guide
+
+1. Fork repo
+2. Create feature branch `git checkout -b feature/new-feature`
+3. Make changes, add tests, update docs
+4. Commit & push
+5. Open a PR
+
+---
+
+## 📜 License
+
+Licensed under MIT – see [LICENSE](LICENSE).
+
+---
+
+## 🙏 Credits
+
+* **React.js** – frontend framework
+* **MongoDB** – database
+* **Google Gemini AI** – analytics
+* **Plotly.js** – 3D visualization
+* **SendGrid** – email integration
+
+---
+
+## 📞 Support
+
+* Open an issue: [Xcelitics Issues](https://github.com/YNikhil188/xcelitics/issues)
+* Include error logs + reproduction steps
+
+---
+
+🚀 **Built with ❤️ by the Xcelitics Team**
+Smarter Data, Smarter Decisions
+---
 
