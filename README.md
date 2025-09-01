@@ -51,39 +51,38 @@
 ## 🔑 Core Features  
 
 ### Security & Authentication  
-✔ User registration & login    
-✔ JWT-based auth with refresh tokens    
-- ✔ Role-based access (Admin/User)  
-- ✔ Email-based password reset (SendGrid)  
-- ✔ Hashed passwords for maximum security  
+✔ User registration & login  
+✔ JWT-based auth with refresh tokens  
+✔ Role-based access (Admin/User)  
+✔ Email-based password reset (SendGrid)  
+✔ Hashed passwords for maximum security  
 
 ### File Management  
-- ✔ Drag & drop uploads  
-- ✔ Support: `.xlsx`, `.xls`, `.csv`  
-- ✔ GridFS for files >16MB  
-- ✔ Upload progress tracking  
-- ✔ Session-persistent file selection  
-- ✔ Auto file preview  
+✔ Drag & drop uploads  
+✔ Support: `.xlsx`, `.xls`, `.csv`  
+✔ GridFS for files >16MB  
+✔ Upload progress tracking  
+✔ Session-persistent file selection  
+✔ Auto file preview  
 
 ### Visualization  
-- ✔ Interactive 3D charts (Bar, Scatter, Surface, Line, Area, Pie)  
-- ✔ Optimized WebGL performance  
-- ✔ Tooltips, zoom, and rotation  
-- ✔ Adaptive data sampling for large files  
-- ✔ Mobile-friendly responsiveness  
+✔ Interactive 3D charts (Bar, Scatter, Surface, Line, Area, Pie)  
+✔ Optimized WebGL performance  
+✔ Tooltips, zoom, and rotation  
+✔ Adaptive data sampling for large files  
+✔ Mobile-friendly responsiveness  
 
 ### AI-Powered Insights  
-- ✔ Natural language queries  
-- ✔ Statistical analysis & recommendations  
-- ✔ Pattern/trend recognition  
-- ✔ Context-aware insights via Gemini AI  
+✔ Natural language queries  
+✔ Statistical analysis & recommendations  
+✔ Pattern/trend recognition  
+✔ Context-aware insights via Gemini AI  
 
 ### User Experience  
-- ✔ Responsive dashboard design  
-- ✔ GSAP animations for polished UI  
-- ✔ Notifications & error handling  
-- ✔ Smooth file-to-analysis workflow  
-
+✔ Responsive dashboard design  
+✔ GSAP animations for polished UI  
+✔ Notifications & error handling  
+✔ Smooth file-to-analysis workflow  
 
 ## 📅 Development Roadmap
 
