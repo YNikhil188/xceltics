@@ -175,7 +175,7 @@ npm run dev
 ## 📁 Project Structure
 
 ```
-Excel_Analytics_Platform/
+Xceltics/
 ├── 📁 backend/                    # Backend API server
 │   ├── 📁 controllers/            # Request handlers
 │   ├── 📁 middleware/             # Authentication & validation
